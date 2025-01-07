@@ -173,9 +173,7 @@ function print_step(integrator)
     u_modified!(integrator, false)
 end
 
-
     step_cb = DiscreteCallback((u,t,integrator)->true, print_step)
-
 
     # **Solve ODE system**
     sol = solve(prob, QBDF(autodiff=false), reltol=IMRsolver_RelTolX, callback=step_cb,saveat=range(0.0, stop=tspan_star, length=1000), progress=true)
@@ -248,12 +246,6 @@ function bubble(u, p::Params, t::Float64)
     delta_star = p.delta_star
     n = p.n
     cav_type = p.cav_type
-
-    # const DTheta = zeros(NT)
-    # const Dk = zeros(NT)
-    # const DDTheta = zeros(NT)
-    # const DDk = zeros(NT)
-    # const du = zeros(length(u))
 
     # **Extract state variables**
     R = u[1]                             # Bubble wall radius
