@@ -1,3 +1,3 @@
-## IMR_simple
+## Simple IMR
 
 Simple MATLAB, Julia, and Python codes to simulate laser/ultrasound-induced inertial cavitation bubble dynamics in soft materials.
