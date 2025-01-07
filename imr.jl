@@ -1,5 +1,3 @@
-# imr.jl
-
 using DifferentialEquations
 using OrdinaryDiffEq
 using Plots
@@ -196,25 +194,6 @@ end
     P_phys = P_nondim .* P_inf
 
     # **Plotting**
-    # p1 = plot(t_phys, R_phys, label="R (m)", linewidth=1,
-    #     xlabel="t (s)", ylabel="R (m)")
-    # p2 = plot(t_phys, U_phys, label="Ṙ (m/s)", linewidth=1,
-    #     xlabel="t (s)", ylabel="Ṙ (m/s)")
-    # p3 = plot(t_phys, P_phys, label="p (Pa)", linewidth=1, yaxis=:log10,
-    #     xlabel="t (s)", ylabel="p (Pa)")
-    # p4 = plot(R_phys, U_phys, label="Ṙ vs R", linewidth=1,
-    #     xlabel="R (m)", ylabel="Ṙ (m/s)")
-
-    # plot(
-    #     p1, p2, p3, p4,
-    #     layout = (2, 2),
-    #     size = (1200, 800),
-    #     margin = 5
-    # )
-
-    # display(plot!(p1, p2, p3, p4))
-
-    # **Plotting**
     p1 = plot(t_phys, R_phys, label="R (m)", linewidth=1,
         xlabel="t (s)", ylabel="R (m)")
     p2 = plot(t_phys, U_phys, label="Ṙ (m/s)", linewidth=1,
@@ -406,8 +385,3 @@ function bubble(u, p::Params, t::Float64)
 
     return du
 end
-
-# if abspath(PROGRAM_FILE) == @__FILE__
-#     main()
-# end
-
